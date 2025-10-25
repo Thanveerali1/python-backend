@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Blog Home</title></head>
+<body>
+  <h1>Blog Home</h1>
+  <a href="/blog/add/">Add post</a>
+  <ul>
+    {% for post in posts %}
+      <li><b>{{ post.title }}</b> — {{ post.content }}</li>
+    {% empty %}
+      <li>No posts yet.</li>
+    {% endfor %}
+  </ul>
+</body></html>
